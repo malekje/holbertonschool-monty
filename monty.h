@@ -42,7 +42,7 @@ void pint(stack_t **stack, unsigned int linenumber);
 void freeit(stack_t **stack);
 void pop(stack_t **stack, unsigned int linenumber);
 void pall(stack_t **stack, unsigned int linenumber);
-int is_digit(char *data);
+int is_digit(char *num);
 void nop(stack_t **stack, unsigned int line_number);
 
 #endif

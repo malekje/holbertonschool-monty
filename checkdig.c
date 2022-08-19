@@ -5,17 +5,17 @@
  * @data: string 
  * Return: 0 or 1
  */
-int is_digit(char *data)
+int is_digit(char *num)
 {
 	unsigned int i;
 
-	if (data == NULL)
+	if (num == NULL)
 		return (0);
-	for (i = 0; data[i] != '\0'; i++)
+	for (i = 0; num[i] != '\0'; i++)
 	{
-		if (data[0] == '-' && i == 0)
+		if (num[0] == '-' && i == 0)
 			continue;
-		if (isdigit(data[i]) == 0)
+		if (isdigit(num[i]) == 0)
 			return (0);
 	}
 	return (1);

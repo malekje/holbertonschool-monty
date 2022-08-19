@@ -8,33 +8,33 @@
 
 void push(stack_t **stack, unsigned int linenumber)
 {
-	stack_t *new = NULL;
+	stack_t *newnd = NULL;
 
 	(void)linenumber;
 
 	if (stack == NULL)
 		return;
-	if (!is_digit)
+	if (!is_digit(num))
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", linenumber);
 		freeit(stack);
 		exit(EXIT_FAILURE);
 	}
 
-	new = malloc(sizeof(stack_t));
-	if (new == NULL)
+	newnd = malloc(sizeof(stack_t));
+	if (newnd == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
 		freeit(stack);
 		exit(EXIT_FAILURE);
 	}
 
-	new->n = atoi(value);
-	new->prev = NULL;
-	new->next = *stack;
+	newnd->n = atoi(num);
+	newnd->prev = NULL;
+	newnd->next = *stack;
 	if (*stack != NULL)
-		(*stack)->prev = new;
-	*stack = new;
+		(*stack)->prev = newnd;
+	*stack = newnd;
 }
 
 
