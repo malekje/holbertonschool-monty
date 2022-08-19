@@ -34,9 +34,9 @@ void push(struct stack_t **stack, unsigned int line_number)
  * @stack: list
  * Return: nothing
  */
-void pall(stack_t **stack, unsigned int linenumber)
+void pall(stack_t **stack, unsigned int line_number)
 {
-	(void)linenumber;
+	(void)line_number;
 
 	stack_t *save = *stack;
 

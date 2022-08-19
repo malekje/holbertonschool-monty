@@ -5,15 +5,15 @@
  * @stack: double list
  * Return: nothing
  */
-void pint(stack_t **stack, unsigned int linenumber)
+void pint(stack_t **stack, unsigned int line_number)
 {
-	(void)linenumber;
+	(void)line_number;
 
 	if (*stack)
 		printf("%d\n", (*stack)->n);
 	else
 	{
-		fprintf(stderr, "L%u: can't pint, stack empty\n", linenumber);
+		fprintf(stderr, "L%u: can't pint, stack empty\n", line_number);
 		free(stack);
 		exit(EXIT_FAILURE);
 	}
@@ -25,14 +25,14 @@ void pint(stack_t **stack, unsigned int linenumber)
  * Return: nothing
  */
 
-void pop(stack_t **stack, unsigned int linenumber)
+void pop(stack_t **stack, unsigned int line_number)
 {
 	stack_t *key = NULL;
-	(void)linenumber;
+	(void)line_number;
 
 	if (!stack || !*stack)
 	{
-		fprintf(stderr, "L%u: can't pop an empty stack\n", linenumber);
+		fprintf(stderr, "L%u: can't pop an empty stack\n", line_number);
 		exit(EXIT_FAILURE);
 		return;
 	}
