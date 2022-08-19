@@ -9,7 +9,8 @@
 void push(stack_t **stack, unsigned int linenumber)
 {
 	stack_t *newnd = NULL;
-
+	int num;
+	
 	(void)linenumber;
 
 	if (stack == NULL)
