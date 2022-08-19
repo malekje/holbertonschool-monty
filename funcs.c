@@ -6,38 +6,28 @@
  * Return: nothing
  */
 
-void push(stack_t **stack, unsigned int linenumber)
+void push(struct stack_t **stack, unsigned int line_number)
 {
-	stack_t *newnd = NULL;
+	stack_t newnd = malloc(sizeof(stack_t));
+	char *value;
+	int cont;
 
-
-	(void)linenumber;
-
-	if (stack == NULL)
-		return;
-	if (!is_digit(num))
-	{
-		fprintf(stderr, "L%d: usage: push integer\n", linenumber);
-		freeit(stack);
-		exit(EXIT_FAILURE);
-	}
-
-	newnd = malloc(sizeof(stack_t));
 	if (newnd == NULL)
 	{
-		fprintf(stderr, "Error: malloc failed\n");
-		freeit(stack);
+		free(newnd);
+		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
+	cont = checkvalue(value, line_number);
+	newnd->n = cont;
 
-	newnd->n = atoi(num);
 	newnd->prev = NULL;
-	newnd->next = *stack;
-	if (*stack != NULL)
-		(*stack)->prev = newnd;
-	*stack = newnd;
+	if (!(*stack))
+	{
+		*stack = newnd;
+		return;
+	}
 }
-
 
 /**
  * pall - print all
@@ -46,7 +36,7 @@ void push(stack_t **stack, unsigned int linenumber)
  */
 void pall(stack_t **stack, unsigned int linenumber)
 {
-    (void)linenumber;
+	(void)linenumber;
 
 	stack_t *save = *stack;
 
