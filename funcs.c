@@ -9,13 +9,12 @@
 void push(stack_t **stack, unsigned int line_number)
 {
 	stack_t *newnd = NULL;
-
+	char *num;
 
 	(void)line_number;
 
 	if (stack == NULL)
 		return;
-	if (!is_digit(num))
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		freeit(stack);
