@@ -7,17 +7,19 @@
  */
 int is_digit(char *data)
 {
-	unsigned int i;
+	char *aux = c;
 
-	if (data == NULL)
+	if (c == NULL)
 		return (0);
-	for (i = 0; data[i] != '\0'; i++)
+	if (*aux == '-')
+		aux++;
+
+	for (; *aux != '\0'; aux++)
 	{
-		if (data[0] == '-' && i == 0)
-			continue;
-		if (isdigit(data[i]) == 0)
+		if ((*aux < '0' || *aux > '9'))
+		{
 			return (0);
+		}
 	}
 	return (1);
 }
-

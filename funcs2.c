@@ -38,7 +38,7 @@ void pop(stack_t **stack, unsigned int linenumber)
 	}
 
 	key = (*stack)->next;
-	freeit(stack);
+	free(stack);
 	*stack = key;
 	if (!*stack)
 		return;
