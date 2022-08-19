@@ -14,7 +14,7 @@ void push(stack_t **stack, unsigned int linenumber)
 
 	if (stack == NULL)
 		return;
-	if (!is_digit(value))
+	if (!is_digit)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", linenumber);
 		freeit(stack);
