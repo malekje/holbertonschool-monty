@@ -40,6 +40,7 @@ typedef struct instruction_s
 } instruction_t;
 
 stack_t *stackit = NULL;
+void (*get_op_func(char *token1))(stack_t **stack, unsigned int line_number);
 int main(int argc, char **argv);
 void read_file(char *argv);
 void push(stack_t **stack, unsigned int line_umber);
