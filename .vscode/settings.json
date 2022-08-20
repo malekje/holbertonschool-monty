@@ -2,6 +2,7 @@
     "C_Cpp.errorSquiggles": "Disabled",
     "files.associations": {
         "ctype.h": "c",
-        "limits": "c"
+        "limits": "c",
+        "read_file": "c"
     }
 }
