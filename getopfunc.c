@@ -1,34 +1,22 @@
 #include "monty.h"
 
 /**
- * get_op_func - select correct operation function
- * @token1: 1st bytecode input (opcode)
- * Return: pointer to correct operation function
+ * get_op_func - function to select any operation 
+ * @func_name: function name"
+ * @line_num: line's number
+ * @stack: stack
  */
-void (*get_op_func(char *token1))(stack_t **stack, unsigned int line_number)
+void get_op_func(char *func_name, unsigned int line_number, stack_t **stack)
 {
-	instruction_t instruction_s[] = {
-		{"pop", pop},
-		{"pall", pall},
-		{"pint", pint},
-		{"swap", swap},
-		{"add", _add},
-		{"sub", _sub},
-		{"mul", _mul},
-		{"div", _div},
-		{"mod", _mod},
-		{"nop", nop},
-		{NULL, NULL}
-	};
-	int i = 0;
+	instruction_t code[] = {{"push", push}, {"pall", pall}, {"pop", pop},
+	 {"pint", pint}, {"swap", swap}, {"add", add_}, {"nop", nop}, {NULL, NULL}};
+	unsigned int i;
 
-	while (instruction_s[i].f != NULL)
+	for (i = 0; code[i].opcode != NULL; i++)
 	{
-		if (strcmp(token1, instruction_s[i].opcode) == 0)
+		if (strcmp(code[i].opcode, func_name) == 0)
 		{
-			return (instruction_s[i].f);
+			code[i].f(stack, line_number);
 		}
-		i++;
 	}
-	return (NULL);
 }

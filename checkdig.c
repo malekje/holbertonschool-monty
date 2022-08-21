@@ -5,19 +5,16 @@
  * @data: string 
  * Return: 0 or 1
  */
-int is_digit(char *num)
+int is_digit(char *arg)
 {
-	unsigned int i;
+	int i;
 
-	if (num == NULL)
-		return (0);
-	for (i = 0; num[i] != '\0'; i++)
+	for (i = 0; arg[i]; i++)
 	{
-		if (num[0] == '-' && i == 0)
+		if (arg[i] == '-' && i == 0)
 			continue;
-		if (isdigit(num[i]) == 0)
-			return (0);
+		if (isdigit(arg[i]) == 0)
+			return (1);
 	}
-	return (1);
+	return (0);
 }
-
