@@ -2,7 +2,7 @@
 
 /**
  * is_digit - check if the data is in digits
- * @data: string 
+ * @data: string
  * Return: 0 or 1
  */
 int is_digit(char *arg)

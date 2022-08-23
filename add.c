@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * add -  adds the first two nodes of the stack
+ * add_ -  adds the first two nodes of the stack
  * @stack: stack given by main
  * @line_count: line counter
  *
