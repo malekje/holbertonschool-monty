@@ -17,6 +17,7 @@ void pop(stack_t **stack, unsigned int line_count)
 		return;
 	}
 
+
 	tmp = (*stack)->next;
 	freeit(stack);
 	*stack = tmp;
