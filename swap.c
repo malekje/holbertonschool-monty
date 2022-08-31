@@ -2,7 +2,7 @@
 
 /**
  * swap - function to swap data
- * @stack: stack 
+ * @stack: stack
  * @line_number: line number
  * Return: nothing
  */

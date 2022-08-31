@@ -2,8 +2,8 @@
 /**
  * main - monty program
  * @argc: counter
- * @argv: value 
- * Return: exit success 
+ * @argv: value
+ * Return: exit success
  */
 
 int main(int argc, char *argv[])

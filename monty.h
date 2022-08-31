@@ -42,7 +42,7 @@ typedef struct instruction_s
 } instruction_t;
 
 char *value;
-stack_t *stackit = NULL;
+
 void get_op_func(char *func_name, unsigned int line_number, stack_t **stack);
 int main(int argc, char **argv);
 int positive(char *func_name);

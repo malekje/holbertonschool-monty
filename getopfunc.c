@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * get_op_func - function to select any operation 
+ * get_op_func - function to select any operation
  * @func_name: function name"
  * @line_num: line's number
  * @stack: stack
